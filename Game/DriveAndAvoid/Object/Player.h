@@ -15,7 +15,7 @@ private:
 	float hp;    //体力
 	float fuel;    //燃料
 	int barrier_count;    //バリアの枚数
-	Barrier* bariier;    //バリア
+	Barrier* barrier;    //バリア
 
 public:
 	Player();

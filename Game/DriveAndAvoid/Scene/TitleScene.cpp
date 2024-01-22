@@ -8,7 +8,7 @@ cursor_image(NULL), menu_cursor(0)
 
 }
 
-TitleScene~TitleScene()
+TitleScene::~TitleScene()
 {
 
 }
@@ -92,18 +92,20 @@ void TitleScene::Draw() const
 	//カーソル画像の描画
 	DrawRotaGraph(90, 220 + menu_cursor * 40, 0.7, DX_PI / 2.0, cursor_image, TRUE);
 
-	//終了時処理
-	void TitleScene::Finalize()
-	{
-		//読み込んだ画像の削除
-		DeleteGraph(background_image);
-		DeleteGraph(menu_image);
-		DeleteGraph(cursor_image);
-	}
-
-	//現在のシーン情報を取得
-	eSceneType TitleScene::GetNowScene() const
-	{
-		return eSceneType::E_TITLE;
-	}
 }
+
+//終了時処理
+void TitleScene::Finalize()
+{
+	//読み込んだ画像の削除
+	DeleteGraph(background_image);
+	DeleteGraph(menu_image);
+	DeleteGraph(cursor_image);
+}
+
+//現在のシーン情報を取得
+eSceneType TitleScene::GetNowScene() const
+{
+	return eSceneType::E_TITLE;
+}
+

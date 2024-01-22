@@ -67,7 +67,7 @@ void Player::Update()
 	}
 
 	//ƒoƒŠƒAˆ—
-	if (InputControl::GetButtonDown(XINPUT_BUTTON_B) && barrier_const > 0)
+	if (InputControl::GetButtonDown(XINPUT_BUTTON_B) && barrier_count > 0)
 	{
 		if (barrier == nullptr)
 		{

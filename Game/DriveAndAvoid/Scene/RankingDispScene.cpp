@@ -19,7 +19,7 @@ void RankingDispScene::Initialize()
 	background_image = LoadGraph("Resource/images/Ranking.bmp");
 
 	//エラーチェック
-	if (back_ground_image == -1)
+	if (background_image == -1)
 	{
 		throw("Resource/images/Ranking.bmpがありません\n");
 	}
@@ -30,7 +30,7 @@ void RankingDispScene::Initialize()
 }
 
 //更新処理
-eSceneType RankingDispScene::Updata()
+eSceneType RankingDispScene::Update()
 {
 	//Bボタンが押されたら、タイトルに戻る
 	if (InputControl::GetButtonDown(XINPUT_BUTTON_B))

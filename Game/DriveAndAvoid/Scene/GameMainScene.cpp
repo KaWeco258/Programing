@@ -23,7 +23,7 @@ GameMainScene::~GameMainScene()
 void GameMainScene::Initialize()
 {
 	//‚“¾“_’l‚ð“Ç‚Ýž‚Þ
-	ReadHighScere();
+	ReadHighScore();
 
 	//‰æ‘œ‚Ì“Ç‚Ýž‚Ý
 	back_ground = LoadGraph("Resource/images/back.bmp");
@@ -120,7 +120,7 @@ eSceneType GameMainScene::Update()
 }
 
 //•`‰æˆ—
-void GameScene::Draw() const
+void GameMainScene::Draw() const
 {
 	//”wŒi‰æ‘œ‚Ì•`‰æ
 	DrawGraph(0, mileage % 480 - 480, back_ground, TRUE);
@@ -170,8 +170,8 @@ void GameScene::Draw() const
 	DrawBoxAA(fx, fy + 20.0f, fx + 100.0f, fy + 40.0f, GetColor(0, 0, 0), FALSE);
 
     //‘Ì—ÍƒQ[ƒW‚Ì•`‰æ
-	float fx = 510.0f;
-	float fy = 430.0f;
+	fx = 510.0f;
+	fy = 430.0f;
 	DrawFormatStringF(fx, fy, GetColor(0, 0, 0), "PLAYER HP");
 	DrawBoxAA(fx, fy + 20.0f, fx + (player->GetHp() * 100 / 1000), fy + 40.0f, GetColor(255, 0, 0), TRUE);
 	DrawBoxAA(fx, fy + 20.0f, fx + 100.0f, fy + 40.0f, GetColor(0, 0, 0), FALSE);

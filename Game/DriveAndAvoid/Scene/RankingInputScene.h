@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SceneManager.h"
+#include "SceneBase.h"
 #include "../Object/RankingData.h"
 
 class RankingInputScene : public SceneBase

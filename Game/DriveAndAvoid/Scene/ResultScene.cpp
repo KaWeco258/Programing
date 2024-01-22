@@ -96,7 +96,7 @@ eSceneType ResultScene::GetNowScene() const
 }
 
 //リザルトデータの読み込み
-void ResultScene;; ReadResultData()
+void ResultScene:: ReadResultData()
 {
 	//ファイルオープン
 	FILE* fp = nullptr;
@@ -112,7 +112,7 @@ void ResultScene;; ReadResultData()
 	fscanf_s(fp, "%6d,\n", &score);
 
 	//避けた数と得点を取得
-	for (int i0; i < 3; i++)
+	for (int i=0; i < 3; i++)
 	{
 		fscanf_s(fp, "%6d,\n", &enemy_count[i]);
 	}

@@ -122,7 +122,7 @@ void SceneManager::Draw() const
 	current_scene->Draw();
 
 	//裏画面の内容を表画面に反映
-	SrceenFilp();
+	ScreenFlip();
 }
 
 //シーン切替処理

@@ -8,7 +8,7 @@ ranking(nullptr), score(0), name_num(0), cursor_x(0), cursor_y(0)
 	memset(name, NULL, (sizeof(char) * 15));
 }
 
-RankingInputScene::~RankingInputScene
+RankingInputScene::~RankingInputScene()
 {
 
 }
