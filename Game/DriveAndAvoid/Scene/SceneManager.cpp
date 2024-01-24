@@ -68,9 +68,8 @@ void SceneManager::Update()
 			InputControl::Update();
 
 			//更新処理(戻り値は次のシーン情報)
-			{
-				eSceneType next = current_scene->Update();
-			}
+			eSceneType next = current_scene->Update();
+			
 
 			//描画処理
 			Draw();
@@ -89,7 +88,8 @@ void SceneManager::Update()
 		}
 
 		//ESCAPEキーが押されたら、ゲームを終了する
-		if (CheckHitKey(KEY_INPUT_ESCAPE) || InputControl::GetButtonUp(XINPUT_BUTTON_BACK))
+		if (CheckHitKey(KEY_INPUT_ESCAPE) || 
+			InputControl::GetButtonUp(XINPUT_BUTTON_BACK))
 		{
 			break;
 		}
