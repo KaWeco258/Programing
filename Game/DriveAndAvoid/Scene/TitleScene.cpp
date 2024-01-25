@@ -50,7 +50,7 @@ eSceneType TitleScene::Update()
 		}
 	}
 	//カーソル上移動
-	if (InputControl::GetButtonDown(XINPUT_BUTTON_DPAD_DOWN))
+	if (InputControl::GetButtonDown(XINPUT_BUTTON_DPAD_UP))
 	{
 		menu_cursor--;
 		//一番上に到達したら、一番下にする

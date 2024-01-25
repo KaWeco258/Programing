@@ -1,7 +1,7 @@
 #include "GameMainScene.h"
 #include "../Object/RankingData.h"
 #include "DxLib.h"
-#include<math.h>
+#include <math.h>
 
 GameMainScene::GameMainScene() : high_score(0), back_ground(NULL),
 barrier_image(NULL), mileage(0), player(nullptr),
@@ -46,7 +46,7 @@ void GameMainScene::Initialize()
 
 	//オブジェクト生成
 	player = new Player;
-	enemy = new Enemy * [10];
+	enemy = new Enemy* [10];
 
 	//オブジェクトの初期化
 	player->Initialize();
