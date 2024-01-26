@@ -28,12 +28,12 @@ void Player::Initialize()
 	barrier_count = 3;
 
 	//画像の読み込み
-	image = LoadGraph("Resource/images/car1pol.bpm");
+	image = LoadGraph("Resource/images/car1pol.bmp");
 
 	//エラーチェック
 	if (image == -1)
 	{
-		throw("Resource/images/car1pol.bpmがありません");
+		throw("Resource/images/car1pol.bmpがありません");
 	}
 }
 
@@ -211,6 +211,12 @@ void Player::Acceleration()
 {
 	//LBボタンが押されたら、減速する
 	if (InputControl::GetButtonDown(XINPUT_BUTTON_LEFT_SHOULDER) && speed > 1.0f)
+	{
+		speed -= 1.0f;
+	}
+
+	//RBボタンが押されたら、加速する
+	if (InputControl::GetButtonDown(XINPUT_BUTTON_RIGHT_SHOULDER) && speed < 15.0f|| InputControl::GetRightTrigger())
 	{
 		speed += 1.0f;
 	}
