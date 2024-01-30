@@ -70,7 +70,7 @@ void ResultScene::Draw() const
 	DrawString(220, 170, "ゲームオーバー", GetColor(204, 0, 0));
 	SetFontSize(16);
 	DrawString(180, 200, "走行距離", GetColor(0, 0, 0));
-	DrawFormatString(250, 200, GetColor(255, 255, 255), "%08d", mileage / 10);
+	DrawFormatString(255, 200, GetColor(255, 255, 255), "=%8d", mileage / 10 * -1);
 	for (int i = 0; i < 3; i++)
 	{
 		DrawRotaGraph(230, 230 + (i * 20), 0.3f, DX_PI_F / 2, enemy_image[i], TRUE);
