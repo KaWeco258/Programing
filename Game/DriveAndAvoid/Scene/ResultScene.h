@@ -14,6 +14,8 @@ public:
 	ResultScene();
 	virtual ~ResultScene();
 
+	int mileage;    //‘–s‹——£
+
 	virtual void Initialize() override;
 	virtual eSceneType Update() override;
 	virtual void Draw() const override;

@@ -2,6 +2,8 @@
 #include "../Object/RankingData.h"
 #include "../Utility/InputControl.h"
 #include "DxLib.h"
+#include "GameMainScene.h"
+
 
 ResultScene::ResultScene() : back_ground(NULL), score(0)
 {
@@ -68,6 +70,7 @@ void ResultScene::Draw() const
 	DrawString(220, 170, "ゲームオーバー", GetColor(204, 0, 0));
 	SetFontSize(16);
 	DrawString(180, 200, "走行距離", GetColor(0, 0, 0));
+	DrawFormatString(250, 200, GetColor(255, 255, 255), "%08d", mileage / 10);
 	for (int i = 0; i < 3; i++)
 	{
 		DrawRotaGraph(230, 230 + (i * 20), 0.3f, DX_PI_F / 2, enemy_image[i], TRUE);
@@ -75,7 +78,7 @@ void ResultScene::Draw() const
 			enemy_count[i], (i + 1) * 50, (i + 1) * 50 * enemy_count[i]);
 	}
 	DrawString(180, 290, "スコア", GetColor(0, 0, 0));
-	DrawFormatString(180, 290, 0xFFFFFF, "=%6d", score);
+	DrawFormatString(250, 290, 0xFFFFFF, "=%6d", score);
 }
 
 //終了時処理
