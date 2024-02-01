@@ -38,7 +38,7 @@ void RankingData::Initialize()
 	//対象ファイルから読み込む
 	for (int i = 0; i < 5; i++)
 	{
-		fscanf_s(fp, "%6d,%2d,%[^,],\n", &score[i], &rank[i], name[i], 15);
+		fscanf_s(fp, "%d,%d,%[^,],\n", &score[i], &rank[i], name[i], 15);
 	}
 
 	//ファイルクローズ
@@ -47,7 +47,7 @@ void RankingData::Initialize()
 	//末尾のデータの設定
 	score[5] = 0;
 	rank[5] = 0;
-	name[5][5] = '\n';
+	name[5][0] = '\0';
 }
 
 //終了処理
